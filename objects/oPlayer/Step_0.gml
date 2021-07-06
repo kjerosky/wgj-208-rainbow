@@ -1,7 +1,4 @@
-var moveX = oInput.moveX;
-var moveY = oInput.moveY;
-var runIsPressed = oInput.runIsPressed;
-var isMoving = moveX != 0 || moveY != 0;
+var isMoving = oInput.moveMagnitude != 0;
 
 if (state == PlayerState.IDLE && isMoving) {
 	state = PlayerState.MOVING;
@@ -11,7 +8,7 @@ if (state == PlayerState.IDLE && isMoving) {
 
 
 
-var moveSpeed = runIsPressed ? RUNNING_SPEED : WALKING_SPEED;
+var moveSpeed = oInput.runIsPressed ? RUNNING_SPEED : WALKING_SPEED;
 var xSpeed = 0;
 var ySpeed = 0;
 var lastSprite = sprite_index;
@@ -23,13 +20,21 @@ switch (state) {
 	case PlayerState.MOVING: {
 		sprite_index = sPlayerMoving;
 
-		xSpeed = moveSpeed * moveX;
-		ySpeed = moveSpeed * moveY;
+		xSpeed = moveSpeed * oInput.moveX;
+		ySpeed = moveSpeed * oInput.moveY;
 
-		if (xSpeed != 0) {
-			facingDirection = xSpeed < 0 ? 2 : 0;
-		} else {
-			facingDirection = ySpeed < 0 ? 1 : 3;
+		var moveOctant = floor(((oInput.moveDirection + 22.5) % 360) / 45);
+		if (moveOctant != facingOctant && moveOctant != octantLeftOfFacingOctant && moveOctant != octantRightOfFacingOctant) {
+			if (moveOctant >= 3 && moveOctant <= 5) {
+				facingOctant = 4;
+			} else if (moveOctant == 2 || moveOctant == 6) {
+				facingOctant = moveOctant;
+			} else {
+				facingOctant = 0;
+			}
+
+			octantLeftOfFacingOctant = facingOctant + 1;
+			octantRightOfFacingOctant = facingOctant == 0 ? 7 : facingOctant - 1;
 		}
 
 		var backgroundTilesLayerId = layer_get_id("BackgroundTiles");
@@ -98,7 +103,8 @@ if (lastSprite != sprite_index) {
 	localFrame = 0;
 }
 
-var totalFrames = sprite_get_number(sprite_index) / 4;
+var totalFrames = sprite_get_number(sprite_index) / TOTAL_SPRITE_FACING_DIRECTIONS;
+var facingDirection = facingOctant / 2;
 image_index = (facingDirection * totalFrames) + localFrame;
 
 localFrame += (moveSpeed / WALKING_SPEED) * sprite_get_speed(sprite_index) / game_get_speed(gamespeed_fps);
