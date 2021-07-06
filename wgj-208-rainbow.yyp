@@ -2,7 +2,7 @@
   "resources": [
     {"id":{"name":"tsBackground","path":"tilesets/tsBackground/tsBackground.yy",},"order":0,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":1,},
-    {"id":{"name":"sPlayerWalking","path":"sprites/sPlayerWalking/sPlayerWalking.yy",},"order":1,},
+    {"id":{"name":"sPlayerMoving","path":"sprites/sPlayerMoving/sPlayerMoving.yy",},"order":1,},
     {"id":{"name":"oInput","path":"objects/oInput/oInput.yy",},"order":2,},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},"order":0,},
     {"id":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},"order":1,},
