@@ -2,8 +2,8 @@ function isTileSolid(tile) {
 	return tile >= 0 && tile < 5;
 }
 
-var moveX = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var moveY = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+var moveX = oInput.moveX;
+var moveY = oInput.moveY;
 
 
 
