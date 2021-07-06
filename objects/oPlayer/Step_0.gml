@@ -70,6 +70,7 @@ switch (state) {
 		}
 
 		// This check covers diagonal collisions at a convex corner.
+		// We'll bias for horizontal movement in this case.
 		if (!tileCollisionHappened && isTileSolid(diagonalNextTile)) {
 			if (ySpeed > 0) {
 				y = floor(y);
@@ -77,7 +78,7 @@ switch (state) {
 				y = ceil(y);
 			}
 
-			while (!isTileSolid(tilemap_get_at_pixel(backgroundTilesTilemapId, x, y + sign(ySpeed)))) {
+			while (!isTileSolid(tilemap_get_at_pixel(backgroundTilesTilemapId, x + xSpeed, y + sign(ySpeed)))) {
 				y += sign(ySpeed);
 			}
 
