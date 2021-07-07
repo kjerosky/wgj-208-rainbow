@@ -1,0 +1,1 @@
+vision.image_angle = 225;
