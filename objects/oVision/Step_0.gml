@@ -29,3 +29,7 @@ for (var step = 0; step <= totalSteps; step++) {
 }
 
 image_blend = DETECTING_PLAYER_COLOR;
+
+if (oGameState.state != ControlState.ALARMING) {
+	oGameState.state = ControlState.START_ALARMING;
+}

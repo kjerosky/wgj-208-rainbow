@@ -26,6 +26,7 @@
     {"id":{"name":"sPortalBlue","path":"sprites/sPortalBlue/sPortalBlue.yy",},"order":2,},
     {"id":{"name":"sPortalWhite","path":"sprites/sPortalWhite/sPortalWhite.yy",},"order":6,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
+    {"id":{"name":"sndDetectedAlarm","path":"sounds/sndDetectedAlarm/sndDetectedAlarm.yy",},"order":0,},
     {"id":{"name":"sPortalMain","path":"sprites/sPortalMain/sPortalMain.yy",},"order":7,},
     {"id":{"name":"sPortalGreen","path":"sprites/sPortalGreen/sPortalGreen.yy",},"order":1,},
     {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},"order":0,},

@@ -1,3 +1,8 @@
+if (oGameState.state != ControlState.PLAYER_NOT_DETECTED) {
+	image_speed = 0;
+	exit;
+}
+
 var isMoving = oInput.moveMagnitude != 0;
 
 if (state == PlayerState.IDLE && isMoving) {
