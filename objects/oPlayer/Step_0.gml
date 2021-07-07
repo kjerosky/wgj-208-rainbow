@@ -114,3 +114,10 @@ if (localFrame >= totalFrames) {
 
 x += xSpeed;
 y += ySpeed;
+
+
+
+var collectedCrystal = instance_place(x, y, oCrystal);
+if (collectedCrystal != noone) {
+	instance_destroy(collectedCrystal);
+}

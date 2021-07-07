@@ -1,11 +1,15 @@
 {
   "resources": [
+    {"id":{"name":"oCrystal","path":"objects/oCrystal/oCrystal.yy",},"order":3,},
     {"id":{"name":"tsBackground","path":"tilesets/tsBackground/tsBackground.yy",},"order":0,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":1,},
+    {"id":{"name":"oGameState","path":"objects/oGameState/oGameState.yy",},"order":4,},
     {"id":{"name":"sPlayerMoving","path":"sprites/sPlayerMoving/sPlayerMoving.yy",},"order":1,},
     {"id":{"name":"oInput","path":"objects/oInput/oInput.yy",},"order":2,},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},"order":0,},
     {"id":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},"order":1,},
+    {"id":{"name":"sCrystalUncolored","path":"sprites/sCrystalUncolored/sCrystalUncolored.yy",},"order":4,},
+    {"id":{"name":"crystals","path":"scripts/crystals/crystals.yy",},"order":1,},
     {"id":{"name":"tiles","path":"scripts/tiles/tiles.yy",},"order":0,},
     {"id":{"name":"sBackgroundTiles","path":"sprites/sBackgroundTiles/sBackgroundTiles.yy",},"order":3,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},

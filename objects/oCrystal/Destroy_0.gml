@@ -1,0 +1,1 @@
+oGameState.collectedCrystals[color] = true;
