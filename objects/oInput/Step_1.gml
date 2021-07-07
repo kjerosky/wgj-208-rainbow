@@ -18,3 +18,5 @@ if (point_distance(0, 0, moveXInput, moveYInput) > 0) {
 }
 
 runIsPressed = keyboard_check(ord("J"));
+
+debugResetWasPressed = keyboard_check_pressed(ord("R"));

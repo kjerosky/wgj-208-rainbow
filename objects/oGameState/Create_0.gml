@@ -5,3 +5,6 @@ for (var i = 0; i < TOTAL_CRYSTALS; i++) {
 }
 
 areAllCrystalsCollected = false;
+
+savePointX = oPlayer.x;
+savePointY = oPlayer.y;
