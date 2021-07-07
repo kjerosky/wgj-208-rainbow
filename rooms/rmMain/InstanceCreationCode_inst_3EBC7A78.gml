@@ -1,1 +1,0 @@
-rotationSpeed = -3;
