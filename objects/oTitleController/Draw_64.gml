@@ -11,7 +11,7 @@ draw_sprite_ext(sCrystalUncolored, -1, redCrystalX, redCrystalY, 1, 1, 0, c_red,
 
 var greenCrystalX = MAIN_GRAPHIC_CENTER_X + CRYSTAL_RADIUS * dcos(greenCrystalAngle);
 var greenCrystalY = MAIN_GRAPHIC_CENTER_Y + CRYSTAL_RADIUS * dsin(greenCrystalAngle);
-draw_sprite_ext(sCrystalUncolored, -1, greenCrystalX, greenCrystalY, 1, 1, 0, c_green, 1);
+draw_sprite_ext(sCrystalUncolored, -1, greenCrystalX, greenCrystalY, 1, 1, 0, c_lime, 1);
 
 var blueCrystalX = MAIN_GRAPHIC_CENTER_X + CRYSTAL_RADIUS * dcos(blueCrystalAngle);
 var blueCrystalY = MAIN_GRAPHIC_CENTER_Y + CRYSTAL_RADIUS * dsin(blueCrystalAngle);
