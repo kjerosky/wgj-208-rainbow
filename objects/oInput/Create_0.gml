@@ -4,5 +4,3 @@ moveDirection = 0;
 moveMagnitude = 0;
 
 runIsPressed = false;
-
-debugResetWasPressed = false;

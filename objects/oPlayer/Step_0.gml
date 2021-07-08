@@ -132,8 +132,3 @@ if (touchedSavePoint != noone) {
 	oGameState.savePointX = touchedSavePoint.x + touchedSavePoint.image_xscale / 2;
 	oGameState.savePointY = touchedSavePoint.y + touchedSavePoint.image_yscale / 2;
 }
-
-if (oInput.debugResetWasPressed) {
-	x = oGameState.savePointX;
-	y = oGameState.savePointY;
-}

@@ -17,6 +17,4 @@ if (point_distance(0, 0, moveXInput, moveYInput) > 0) {
 	moveMagnitude = point_distance(0, 0, moveX, moveY);
 }
 
-runIsPressed = keyboard_check(ord("J"));
-
-debugResetWasPressed = keyboard_check_pressed(ord("R"));
+runIsPressed = keyboard_check(ord("J")) || keyboard_check(ord("K"));
