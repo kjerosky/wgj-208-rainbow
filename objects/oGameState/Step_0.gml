@@ -18,8 +18,7 @@ if (state == ControlState.START_ALARMING) {
 
 	postPortalWaitFramesLeft = TOTAL_POST_PORTAL_WAIT_FRAMES;
 } else if (state == ControlState.POST_PORTAL_WAIT && postPortalWaitFramesLeft <= 0) {
-	//TODO
-	game_end();
+	room_goto_next();
 }
 
 

@@ -5,6 +5,8 @@ moveMagnitude = 0;
 
 runIsPressed = false;
 
+anyKeyWasPressed = false;
+
 
 
 var moveXInput = keyboard_check(ord("D")) - keyboard_check(ord("A"));
@@ -18,3 +20,5 @@ if (point_distance(0, 0, moveXInput, moveYInput) > 0) {
 }
 
 runIsPressed = keyboard_check(ord("J")) || keyboard_check(ord("K"));
+
+anyKeyWasPressed = keyboard_check_pressed(vk_anykey);
