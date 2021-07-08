@@ -3,7 +3,8 @@ enum TitleState {
 	FADE_IN_MAIN_GRAPHICS,
 	FADE_IN_ALL_TEXT,
 	ALLOW_PLAYER_INPUT,
-	FADE_OUT
+	FADE_OUT,
+	SHOW_CREDITS
 };
 
 state = TitleState.INITIAL_WAIT;
@@ -36,6 +37,7 @@ fadeOutFramesLeft = TOTAL_FADE_OUT_FRAMES;
 
 MENU_OPTIONS = [
 	"START GAME",
+	"CREDITS",
 	"EXIT"
 ];
 MENU_OPTIONS_SIZE = array_length(MENU_OPTIONS);
@@ -44,3 +46,5 @@ selectedMenuOption = 0;
 
 MAIN_GRAPHIC_CENTER_X = oCamera.VIEW_WIDTH / 2;
 MAIN_GRAPHIC_CENTER_Y = oCamera.VIEW_HEIGHT / 2 - 10;
+
+startingToShowCredits = false;

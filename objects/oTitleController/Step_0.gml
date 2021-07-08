@@ -7,13 +7,19 @@ if (state == TitleState.INITIAL_WAIT && initialWaitFramesLeft <= 0) {
 } else if (state == TitleState.FADE_IN_ALL_TEXT && fadeInAllTextFramesLeft <= 0) {
 	state = TitleState.ALLOW_PLAYER_INPUT;
 } else if (state == TitleState.ALLOW_PLAYER_INPUT && oInput.menuSelectWasPressed) {
-	state = TitleState.FADE_OUT;
+	if (selectedMenuOption == 1) {
+		state = TitleState.SHOW_CREDITS;
+		startingToShowCredits = true;
+		audio_play_sound(sndCrystalPickup, 10, false);
+	} else {
+		state = TitleState.FADE_OUT;
 
-	audio_play_sound(sndCrystalPickup, 10, false);
+		audio_play_sound(sndCrystalPickup, 10, false);
+	}
 } else if (state == TitleState.FADE_OUT && fadeOutFramesLeft <= 0) {
 	if (selectedMenuOption == 0) {
 		room_goto_next();
-	} else if (selectedMenuOption == 1) {
+	} else if (selectedMenuOption == 2) {
 		game_end();
 	}
 }
@@ -54,6 +60,14 @@ switch (state) {
 	case TitleState.FADE_OUT: {
 		fadeOutFramesLeft--;
 		allBlackAlpha = lerp(0, 1, 1 - fadeOutFramesLeft / TOTAL_FADE_OUT_FRAMES);
+	} break;
+
+	case TitleState.SHOW_CREDITS: {
+		if (!startingToShowCredits && oInput.anyKeyWasPressed) {
+			state = TitleState.ALLOW_PLAYER_INPUT;
+			audio_play_sound(sndMenuMove, 10, false);
+		}
+		startingToShowCredits = false;
 	} break;
 
 	default: {
