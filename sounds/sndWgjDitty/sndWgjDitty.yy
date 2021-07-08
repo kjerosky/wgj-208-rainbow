@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndCrystalPickup.ogg",
-  "duration": 0.501599,
+  "soundFile": "sndWgjDitty.ogg",
+  "duration": 1.607268,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sndCrystalPickup",
+  "name": "sndWgjDitty",
   "tags": [],
   "resourceType": "GMSound",
 }

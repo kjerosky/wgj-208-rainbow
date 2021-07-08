@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndCrystalPickup.ogg",
-  "duration": 0.501599,
+  "soundFile": "sndMenuMove.ogg",
+  "duration": 0.120011,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sndCrystalPickup",
+  "name": "sndMenuMove",
   "tags": [],
   "resourceType": "GMSound",
 }
