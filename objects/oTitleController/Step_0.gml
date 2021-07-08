@@ -7,7 +7,7 @@ if (state == TitleState.INITIAL_WAIT && initialWaitFramesLeft <= 0) {
 } else if (state == TitleState.ALLOW_PLAYER_INPUT && oInput.menuSelectWasPressed) {
 	state = TitleState.FADE_OUT;
 
-	audio_play_sound(sndCrystalPickup, 0, false);
+	audio_play_sound(sndCrystalPickup, 10, false);
 } else if (state == TitleState.FADE_OUT && fadeOutFramesLeft <= 0) {
 	if (selectedMenuOption == 0) {
 		room_goto_next();
@@ -35,13 +35,13 @@ switch (state) {
 
 	case TitleState.ALLOW_PLAYER_INPUT: {
 		if (oInput.menuUpWasPressed) {
-			audio_play_sound(sndMenuMove, 0, false);
+			audio_play_sound(sndMenuMove, 10, false);
 			selectedMenuOption--;
 			if (selectedMenuOption < 0) {
 				selectedMenuOption = MENU_OPTIONS_SIZE - 1;
 			}
 		} else if (oInput.menuDownWasPressed) {
-			audio_play_sound(sndMenuMove, 0, false);
+			audio_play_sound(sndMenuMove, 10, false);
 			selectedMenuOption++;
 			if (selectedMenuOption >= MENU_OPTIONS_SIZE) {
 				selectedMenuOption = 0;

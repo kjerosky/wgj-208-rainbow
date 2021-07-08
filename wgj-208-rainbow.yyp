@@ -24,6 +24,7 @@
     {"id":{"name":"sTextAvoidDeviceVision","path":"sprites/sTextAvoidDeviceVision/sTextAvoidDeviceVision.yy",},"order":2,},
     {"id":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},"order":1,},
     {"id":{"name":"sPortalCyan","path":"sprites/sPortalCyan/sPortalCyan.yy",},"order":4,},
+    {"id":{"name":"musMain","path":"sounds/musMain/musMain.yy",},"order":5,},
     {"id":{"name":"oVision","path":"objects/oVision/oVision.yy",},"order":8,},
     {"id":{"name":"rmSplashScreen","path":"rooms/rmSplashScreen/rmSplashScreen.yy",},"order":5,},
     {"id":{"name":"sPortalShine","path":"sprites/sPortalShine/sPortalShine.yy",},"order":8,},

@@ -36,3 +36,5 @@ MENU_OPTIONS = [
 MENU_OPTIONS_SIZE = array_length(MENU_OPTIONS);
 MENU_OPTIONS_SPACING = 18;
 selectedMenuOption = 0;
+
+audio_play_sound(musMain, 0, true);

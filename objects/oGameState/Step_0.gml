@@ -3,7 +3,7 @@ var alarmIsSounding = audio_is_playing(sndDetectedAlarm);
 if (state == ControlState.START_ALARMING) {
 	state = ControlState.ALARMING;
 
-	audio_play_sound(sndDetectedAlarm, 0, false);
+	audio_play_sound(sndDetectedAlarm, 10, false);
 } else if (state == ControlState.ALARMING && !alarmIsSounding) {
 	state = ControlState.PLAYER_NOT_DETECTED;
 
@@ -13,29 +13,31 @@ if (state == ControlState.START_ALARMING) {
 	state = ControlState.ENTERING_PORTAL;
 
 	enteringPortalFramesLeft = TOTAL_ENTERING_PORTAL_FRAMES;
-	audio_play_sound(sndTeleport, 0, false);
+	audio_play_sound(sndTeleport, 10, false);
 } else if (state == ControlState.ENTERING_PORTAL && enteringPortalFramesLeft <= 0) {
 	state = ControlState.POST_PORTAL_WAIT;
 
 	postPortalWaitFramesLeft = TOTAL_POST_PORTAL_WAIT_FRAMES;
 } else if (state == ControlState.POST_PORTAL_WAIT && postPortalWaitFramesLeft <= 0) {
 	room_goto_next();
-} else if (state != ControlState.PAUSED && oInput.pauseWasPressed) {
+} else if (state == ControlState.PLAYER_NOT_DETECTED && oInput.pauseWasPressed) {
 	previousState = state;
 	state = ControlState.PAUSED;
 
 	selectedMenuOption = 0;
+	audio_pause_all();
 } else if (state == ControlState.PAUSED) {
 	if (oInput.pauseWasPressed) {
 		state = previousState;
+		audio_resume_all();
 	} else if (oInput.menuUpWasPressed) {
-		audio_play_sound(sndMenuMove, 0, false);
+		audio_play_sound(sndMenuMove, 10, false);
 		selectedMenuOption--;
 		if (selectedMenuOption < 0) {
 			selectedMenuOption = MENU_OPTIONS_SIZE - 1;
 		}
 	} else if (oInput.menuDownWasPressed) {
-		audio_play_sound(sndMenuMove, 0, false);
+		audio_play_sound(sndMenuMove, 10, false);
 		selectedMenuOption++;
 		if (selectedMenuOption >= MENU_OPTIONS_SIZE) {
 			selectedMenuOption = 0;
@@ -44,6 +46,7 @@ if (state == ControlState.START_ALARMING) {
 		if (selectedMenuOption == 0) {
 			state = previousState;
 		} else if (selectedMenuOption == 1) {
+			audio_stop_all();
 			room_goto(rmTitle);
 		}
 	}
