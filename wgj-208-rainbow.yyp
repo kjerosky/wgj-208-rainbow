@@ -14,6 +14,7 @@
     {"id":{"name":"fntMain","path":"fonts/fntMain/fntMain.yy",},"order":0,},
     {"id":{"name":"oSecurityMoving","path":"objects/oSecurityMoving/oSecurityMoving.yy",},"order":10,},
     {"id":{"name":"oInput","path":"objects/oInput/oInput.yy",},"order":2,},
+    {"id":{"name":"oIntroTextController","path":"objects/oIntroTextController/oIntroTextController.yy",},"order":1,},
     {"id":{"name":"oSavePoint","path":"objects/oSavePoint/oSavePoint.yy",},"order":6,},
     {"id":{"name":"oSecurity360","path":"objects/oSecurity360/oSecurity360.yy",},"order":11,},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},"order":0,},
@@ -24,6 +25,7 @@
     {"id":{"name":"sPortalShine","path":"sprites/sPortalShine/sPortalShine.yy",},"order":8,},
     {"id":{"name":"oSecurityPanning","path":"objects/oSecurityPanning/oSecurityPanning.yy",},"order":9,},
     {"id":{"name":"sndCrystalPickup","path":"sounds/sndCrystalPickup/sndCrystalPickup.yy",},"order":1,},
+    {"id":{"name":"rmIntroText","path":"rooms/rmIntroText/rmIntroText.yy",},"order":3,},
     {"id":{"name":"sCrystalUncolored","path":"sprites/sCrystalUncolored/sCrystalUncolored.yy",},"order":4,},
     {"id":{"name":"crystals","path":"scripts/crystals/crystals.yy",},"order":1,},
     {"id":{"name":"tiles","path":"scripts/tiles/tiles.yy",},"order":0,},
@@ -58,6 +60,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
+    {"roomId":{"name":"rmIntroText","path":"rooms/rmIntroText/rmIntroText.yy",},},
     {"roomId":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
     {"roomId":{"name":"rmWinScreen","path":"rooms/rmWinScreen/rmWinScreen.yy",},},
   ],
