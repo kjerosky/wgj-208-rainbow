@@ -45,6 +45,7 @@ if (state == ControlState.START_ALARMING) {
 	} else if (oInput.menuSelectWasPressed) {
 		if (selectedMenuOption == 0) {
 			state = previousState;
+			audio_resume_all();
 		} else if (selectedMenuOption == 1) {
 			audio_stop_all();
 			room_goto(rmTitle);

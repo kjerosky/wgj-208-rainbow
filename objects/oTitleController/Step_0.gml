@@ -1,5 +1,7 @@
 if (state == TitleState.INITIAL_WAIT && initialWaitFramesLeft <= 0) {
 	state = TitleState.FADE_IN_MAIN_GRAPHICS;
+
+	audio_play_sound(musTitle, 0, true);
 } else if (state == TitleState.FADE_IN_MAIN_GRAPHICS && fadeInMainGraphicsFramesLeft <= 0) {
 	state = TitleState.FADE_IN_ALL_TEXT;
 } else if (state == TitleState.FADE_IN_ALL_TEXT && fadeInAllTextFramesLeft <= 0) {
