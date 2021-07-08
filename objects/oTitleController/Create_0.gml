@@ -9,7 +9,7 @@ enum TitleState {
 
 state = TitleState.INITIAL_WAIT;
 
-CRYSTAL_RADIUS = 40;
+CRYSTAL_RADIUS = 35;
 CRYSTAL_ROTATION_SPEED = -0.5;
 redCrystalAngle = 0;
 greenCrystalAngle = 120;
@@ -45,7 +45,7 @@ MENU_OPTIONS_SPACING = 18;
 selectedMenuOption = 0;
 
 MAIN_GRAPHIC_CENTER_X = oCamera.VIEW_WIDTH / 2;
-MAIN_GRAPHIC_CENTER_Y = oCamera.VIEW_HEIGHT / 2 - 10;
+MAIN_GRAPHIC_CENTER_Y = oCamera.VIEW_HEIGHT / 2 - 17;
 
 startingToShowCredits = false;
 

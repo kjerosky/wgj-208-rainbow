@@ -31,7 +31,7 @@ for (var i = 0; i < MENU_OPTIONS_SIZE; i++) {
 	var menuOptionText = isSelectedMenuOption ? "< " + MENU_OPTIONS[i] + " >" : MENU_OPTIONS[i];
 
 	draw_set_color(menuOptionColor);
-	draw_text(centerX, 140 + MENU_OPTIONS_SPACING * i, menuOptionText);
+	draw_text(centerX, 126 + MENU_OPTIONS_SPACING * i, menuOptionText);
 }
 
 draw_set_alpha(allBlackAlpha);
@@ -45,17 +45,13 @@ if (state == TitleState.SHOW_CREDITS) {
 
 	draw_set_color(c_white);
 	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
-	draw_text(0, 0,
+	draw_set_valign(fa_middle);
+	draw_text(3, oCamera.VIEW_HEIGHT / 2,
 		"\"Homeward Hues\" by Keith Jerosky\n" +
-		"Submission to WeeklyGameJam Week 208\n" +
-		"July 8, 2021\n" +
+		"Submitted to WGJ 208: July 8, 2021\n" +
 		"\n" +
-		"Title Screen Music:\n" +
+		"Music:\n" +
 		"Synapse by Shane Ivers\n" +
-		"https://www.silvermansound.com\n" +
-		"\n" +
-		"Main Game Music:\n" +
 		"Big Boi Pants by Shane Ivers\n" +
 		"https://www.silvermansound.com"
 	);
