@@ -83,3 +83,8 @@ blueCrystalAngle += CRYSTAL_ROTATION_SPEED;
 
 clockwise_shine_angle += CLOCKWISE_SHINE_ROTATION_SPEED;
 counter_clockwise_shine_angle += COUNTER_CLOCKWISE_SHINE_ROTATION_SPEED;
+
+gameNameHue++;
+if (gameNameHue > 255) {
+	gameNameHue = 0;
+}

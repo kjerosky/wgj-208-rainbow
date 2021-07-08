@@ -48,3 +48,5 @@ MAIN_GRAPHIC_CENTER_X = oCamera.VIEW_WIDTH / 2;
 MAIN_GRAPHIC_CENTER_Y = oCamera.VIEW_HEIGHT / 2 - 10;
 
 startingToShowCredits = false;
+
+gameNameHue = 0;

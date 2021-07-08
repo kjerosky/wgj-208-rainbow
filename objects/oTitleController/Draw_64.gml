@@ -20,7 +20,9 @@ draw_sprite_ext(sCrystalUncolored, -1, blueCrystalX, blueCrystalY, 1, 1, 0, c_bl
 draw_set_alpha(allTextAlpha);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_color(c_white);
+
+var gameNameColor = make_color_hsv(gameNameHue, 255, 255);
+draw_set_color(gameNameColor);
 draw_text(centerX, 20, "HOMEWARD HUES");
 
 for (var i = 0; i < MENU_OPTIONS_SIZE; i++) {
