@@ -9,6 +9,34 @@ if (state == ControlState.START_ALARMING) {
 
 	oPlayer.x = savePointX;
 	oPlayer.y = savePointY;
+} else if (state == ControlState.START_ENTERING_PORTAL) {
+	state = ControlState.ENTERING_PORTAL;
+
+	enteringPortalFramesLeft = TOTAL_ENTERING_PORTAL_FRAMES;
+} else if (state == ControlState.ENTERING_PORTAL && enteringPortalFramesLeft <= 0) {
+	state = ControlState.POST_PORTAL_WAIT;
+
+	postPortalWaitFramesLeft = TOTAL_POST_PORTAL_WAIT_FRAMES;
+} else if (state == ControlState.POST_PORTAL_WAIT && postPortalWaitFramesLeft <= 0) {
+	//TODO
+	game_end();
+}
+
+
+
+switch (state) {
+	case ControlState.ENTERING_PORTAL: {
+		enteringPortalFramesLeft--;
+		portalFlashAlpha = lerp(0, 1, 1 - enteringPortalFramesLeft / TOTAL_ENTERING_PORTAL_FRAMES);
+	} break;
+
+	case ControlState.POST_PORTAL_WAIT: {
+		postPortalWaitFramesLeft--;
+	} break;
+
+	default: {
+		// do nothing
+	}
 }
 
 

@@ -16,3 +16,7 @@ if (showRed && showGreen && showBlue) {
 } else if (showMagenta) {
 	middleColor = c_fuchsia;
 }
+
+if (oGameState.areAllCrystalsCollected) {
+	shineRotationAngle -= SHINE_ROTATION_SPEED;
+}

@@ -1,7 +1,10 @@
 enum ControlState {
 	PLAYER_NOT_DETECTED,
 	START_ALARMING,
-	ALARMING
+	ALARMING,
+	START_ENTERING_PORTAL,
+	ENTERING_PORTAL,
+	POST_PORTAL_WAIT
 };
 
 state = ControlState.PLAYER_NOT_DETECTED;
@@ -16,3 +19,10 @@ areAllCrystalsCollected = false;
 
 savePointX = oPlayer.x;
 savePointY = oPlayer.y;
+
+TOTAL_ENTERING_PORTAL_FRAMES = 120;
+enteringPortalFramesLeft = 0;
+portalFlashAlpha = 0;
+
+TOTAL_POST_PORTAL_WAIT_FRAMES = 60;
+postPortalWaitFramesLeft = 0;

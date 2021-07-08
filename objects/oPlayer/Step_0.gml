@@ -132,3 +132,7 @@ if (touchedSavePoint != noone) {
 	oGameState.savePointX = touchedSavePoint.x + touchedSavePoint.image_xscale / 2;
 	oGameState.savePointY = touchedSavePoint.y + touchedSavePoint.image_yscale / 2;
 }
+
+if (oGameState.areAllCrystalsCollected && point_distance(x, y, oPortal.x, oPortal.y) < 8) {
+	oGameState.state = ControlState.START_ENTERING_PORTAL;
+}

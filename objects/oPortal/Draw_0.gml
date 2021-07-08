@@ -27,3 +27,7 @@ if (middleColor != noone) {
 }
 
 draw_sprite(sPortalMain, -1, x, y);
+
+if (oGameState.areAllCrystalsCollected) {
+	draw_sprite_ext(sPortalShine, -1, x, y, 1, 1, shineRotationAngle, c_white, 1);
+}
