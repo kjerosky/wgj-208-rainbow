@@ -1,6 +1,6 @@
 {
-  "option_mac_display_name": "Created with GameMaker Studio 2",
-  "option_mac_app_id": "com.company.game",
+  "option_mac_display_name": "Homeward Hues",
+  "option_mac_app_id": "site.keithj.homewardhues",
   "option_mac_version": "1.0.0.0",
   "option_mac_output_dir": "~/gamemakerstudio2",
   "option_mac_team_id": "",
