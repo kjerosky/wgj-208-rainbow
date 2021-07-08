@@ -6,3 +6,7 @@ moveMagnitude = 0;
 runIsPressed = false;
 
 anyKeyWasPressed = false;
+
+menuUpWasPressed = false;
+menuDownWasPressed = false;
+menuSelectWasPressed = false;

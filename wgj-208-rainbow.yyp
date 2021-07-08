@@ -3,6 +3,7 @@
     {"id":{"name":"oCrystal","path":"objects/oCrystal/oCrystal.yy",},"order":3,},
     {"id":{"name":"tsBackground","path":"tilesets/tsBackground/tsBackground.yy",},"order":0,},
     {"id":{"name":"sTextWallsBlockDeviceVision","path":"sprites/sTextWallsBlockDeviceVision/sTextWallsBlockDeviceVision.yy",},"order":1,},
+    {"id":{"name":"oTitleController","path":"objects/oTitleController/oTitleController.yy",},"order":2,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":1,},
     {"id":{"name":"oGameState","path":"objects/oGameState/oGameState.yy",},"order":4,},
     {"id":{"name":"sTextControls","path":"sprites/sTextControls/sTextControls.yy",},"order":3,},
@@ -43,6 +44,7 @@
     {"id":{"name":"sndDetectedAlarm","path":"sounds/sndDetectedAlarm/sndDetectedAlarm.yy",},"order":0,},
     {"id":{"name":"sPortalMain","path":"sprites/sPortalMain/sPortalMain.yy",},"order":7,},
     {"id":{"name":"sPortalGreen","path":"sprites/sPortalGreen/sPortalGreen.yy",},"order":1,},
+    {"id":{"name":"rmTitle","path":"rooms/rmTitle/rmTitle.yy",},"order":4,},
     {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},"order":0,},
   ],
   "Options": [
@@ -60,6 +62,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
+    {"roomId":{"name":"rmTitle","path":"rooms/rmTitle/rmTitle.yy",},},
     {"roomId":{"name":"rmIntroText","path":"rooms/rmIntroText/rmIntroText.yy",},},
     {"roomId":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
     {"roomId":{"name":"rmWinScreen","path":"rooms/rmWinScreen/rmWinScreen.yy",},},

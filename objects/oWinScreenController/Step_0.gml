@@ -1,4 +1,3 @@
 if (oInput.anyKeyWasPressed) {
-	//TODO
-	game_end();
+	room_goto(rmTitle);
 }
