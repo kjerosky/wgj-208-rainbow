@@ -19,6 +19,33 @@ if (state == ControlState.START_ALARMING) {
 	postPortalWaitFramesLeft = TOTAL_POST_PORTAL_WAIT_FRAMES;
 } else if (state == ControlState.POST_PORTAL_WAIT && postPortalWaitFramesLeft <= 0) {
 	room_goto_next();
+} else if (state != ControlState.PAUSED && oInput.pauseWasPressed) {
+	previousState = state;
+	state = ControlState.PAUSED;
+
+	selectedMenuOption = 0;
+} else if (state == ControlState.PAUSED) {
+	if (oInput.pauseWasPressed) {
+		state = previousState;
+	} else if (oInput.menuUpWasPressed) {
+		audio_play_sound(sndMenuMove, 0, false);
+		selectedMenuOption--;
+		if (selectedMenuOption < 0) {
+			selectedMenuOption = MENU_OPTIONS_SIZE - 1;
+		}
+	} else if (oInput.menuDownWasPressed) {
+		audio_play_sound(sndMenuMove, 0, false);
+		selectedMenuOption++;
+		if (selectedMenuOption >= MENU_OPTIONS_SIZE) {
+			selectedMenuOption = 0;
+		}
+	} else if (oInput.menuSelectWasPressed) {
+		if (selectedMenuOption == 0) {
+			state = previousState;
+		} else if (selectedMenuOption == 1) {
+			room_goto(rmTitle);
+		}
+	}
 }
 
 

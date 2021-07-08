@@ -10,3 +10,5 @@ anyKeyWasPressed = false;
 menuUpWasPressed = false;
 menuDownWasPressed = false;
 menuSelectWasPressed = false;
+
+pauseWasPressed = false;

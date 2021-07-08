@@ -11,6 +11,8 @@ menuUpWasPressed = false;
 menuDownWasPressed = false;
 menuSelectWasPressed = false;
 
+pauseWasPressed = false;
+
 
 
 var moveXInput = keyboard_check(ord("D")) - keyboard_check(ord("A"));
@@ -30,3 +32,5 @@ anyKeyWasPressed = keyboard_check_pressed(vk_anykey);
 menuUpWasPressed = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 menuDownWasPressed = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
 menuSelectWasPressed = keyboard_check_pressed(ord("J")) || keyboard_check_pressed(ord("K")) || keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space);
+
+pauseWasPressed = keyboard_check_pressed(vk_escape);
