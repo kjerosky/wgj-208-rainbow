@@ -13,6 +13,7 @@ if (state == ControlState.START_ALARMING) {
 	state = ControlState.ENTERING_PORTAL;
 
 	enteringPortalFramesLeft = TOTAL_ENTERING_PORTAL_FRAMES;
+	audio_play_sound(sndTeleport, 0, false);
 } else if (state == ControlState.ENTERING_PORTAL && enteringPortalFramesLeft <= 0) {
 	state = ControlState.POST_PORTAL_WAIT;
 
