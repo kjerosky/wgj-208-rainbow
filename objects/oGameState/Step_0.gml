@@ -9,6 +9,12 @@ if (state == ControlState.START_ALARMING) {
 
 	oPlayer.x = savePointX;
 	oPlayer.y = savePointY;
+
+	// The vision's collision flag gets stuck for some reason, causing the alarm to
+	// continuously sound.  Let's reset all of them here to be safe.
+	with (oVision) {
+		isPlayerTouchingAssociatedSecurity = false;
+	}
 } else if (state == ControlState.START_ENTERING_PORTAL) {
 	state = ControlState.ENTERING_PORTAL;
 

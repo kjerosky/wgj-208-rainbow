@@ -51,3 +51,5 @@ switch (state) {
 vision.x = x;
 vision.y = y;
 vision.image_angle = rotationAngle;
+
+vision.isPlayerTouchingAssociatedSecurity = place_meeting(x, y, oPlayer);

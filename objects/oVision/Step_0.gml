@@ -3,7 +3,15 @@ var playerY = oPlayer.y;
 
 image_blend = NOT_DETECTING_PLAYER_COLOR;
 var canSeePlayer = instance_position(playerX, playerY, self);
-if (!canSeePlayer) {
+if (isPlayerTouchingAssociatedSecurity) {
+	image_blend = DETECTING_PLAYER_COLOR;
+
+	if (oGameState.state != ControlState.ALARMING) {
+		oGameState.state = ControlState.START_ALARMING;
+	}
+
+	exit;
+} else if (!canSeePlayer) {
 	exit;
 }
 
