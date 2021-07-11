@@ -5,13 +5,13 @@
 VIEW_WIDTH = 1920 / 6;
 VIEW_HEIGHT = 1080 / 6;
 
-// Fullscreen is best screen.  :)
-window_set_fullscreen(true);
-
 // Window centering needs to happen one step after the setting of the window size,
 // otherwise the new window size will not be taken into account after centering the window.
-window_set_size(VIEW_WIDTH, VIEW_HEIGHT);
+window_set_size(VIEW_WIDTH * 4, VIEW_HEIGHT * 4);
 alarm[0] = 1;
+
+// Fullscreen is best screen.  :)
+window_set_fullscreen(true);
 
 // The application surface controls how much the pixels in the window we're actually using.
 // We're also going to match the application surface resolution to that of the display
