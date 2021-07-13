@@ -4,6 +4,7 @@ if (state == ControlState.START_ALARMING) {
 	state = ControlState.ALARMING;
 
 	audio_play_sound(sndDetectedAlarm, 10, false);
+	oScoreTracker.alerts++;
 } else if (state == ControlState.ALARMING && !alarmIsSounding) {
 	state = ControlState.PLAYER_NOT_DETECTED;
 
@@ -19,6 +20,7 @@ if (state == ControlState.START_ALARMING) {
 	state = ControlState.ENTERING_PORTAL;
 
 	enteringPortalFramesLeft = TOTAL_ENTERING_PORTAL_FRAMES;
+	oScoreTracker.timeTrackingState = TimeTrackingState.SIGNAL_PAUSED;
 	audio_play_sound(sndTeleport, 10, false);
 } else if (state == ControlState.ENTERING_PORTAL && enteringPortalFramesLeft <= 0) {
 	state = ControlState.POST_PORTAL_WAIT;
@@ -31,11 +33,13 @@ if (state == ControlState.START_ALARMING) {
 	state = ControlState.PAUSED;
 
 	selectedMenuOption = 0;
+	oScoreTracker.timeTrackingState = TimeTrackingState.SIGNAL_PAUSED;
 	audio_pause_all();
 } else if (state == ControlState.PAUSED) {
 	if (oInput.pauseWasPressed) {
 		state = previousState;
 		audio_resume_all();
+		oScoreTracker.timeTrackingState = TimeTrackingState.SIGNAL_RUNNING;
 	} else if (oInput.menuUpWasPressed) {
 		audio_play_sound(sndMenuMove, 10, false);
 		selectedMenuOption--;
@@ -52,6 +56,7 @@ if (state == ControlState.START_ALARMING) {
 		if (selectedMenuOption == 0) {
 			state = previousState;
 			audio_resume_all();
+			oScoreTracker.timeTrackingState = TimeTrackingState.SIGNAL_RUNNING;
 		} else if (selectedMenuOption == 1) {
 			audio_stop_all();
 			room_goto(rmTitle);
